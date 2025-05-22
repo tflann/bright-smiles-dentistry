@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { FaTooth, FaChild, FaUserMd, FaHeartbeat } from 'react-icons/fa'
+import { FaTooth, FaChild, FaUserMd, FaHeartbeat, FaCheck } from 'react-icons/fa'
 
 const services = [
   {
@@ -54,50 +54,85 @@ const services = [
 
 export default function FamilyServicesSection() {
   return (
-    <section className="section-padding bg-white">
+    <section className="py-16 bg-white">
       <div className="container-custom">
-        <h2 className="section-title">Family-Friendly Dental Care</h2>
-        <p className="section-subtitle">
-          We understand that finding the right dentist for your family is important. 
-          That's why we've created a welcoming environment where everyone feels comfortable, 
-          from your youngest to your oldest family members.
+        <h2 className="text-3xl font-serif font-bold text-center mb-4">Family-Friendly Dental Care</h2>
+        <p className="text-xl text-neutral-dark/80 text-center mb-12">
+          Comprehensive dental services for every member of your family, from toddlers to grandparents.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="card"
-            >
-              <div className="flex items-start gap-4">
-                <div className="text-primary-blue">
-                  {service.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-neutral-dark/80 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-neutral-dark/80">
-                        <span className="text-accent-green mr-2">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-neutral-light p-8 rounded-lg">
+            <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6">
+              <FaChild className="w-8 h-8 text-primary-blue" />
+            </div>
+            <h3 className="text-xl font-bold mb-4">Children's Dentistry</h3>
+            <p className="text-neutral-dark/80 mb-6">
+              Gentle, fun dental visits that help your child develop positive oral health habits for life.
+            </p>
+            <ul className="space-y-2 text-neutral-dark/80">
+              <li className="flex items-center">
+                <FaCheck className="w-5 h-5 text-primary-blue mr-2" />
+                First Visit Program
+              </li>
+              <li className="flex items-center">
+                <FaCheck className="w-5 h-5 text-primary-blue mr-2" />
+                Preventive Care
+              </li>
+              <li className="flex items-center">
+                <FaCheck className="w-5 h-5 text-primary-blue mr-2" />
+                Fun, Kid-Friendly Environment
+              </li>
+            </ul>
+          </div>
 
-        <div className="mt-12 text-center">
-          <Link href="/services" className="btn-primary">
-            View All Services
-          </Link>
+          <div className="bg-neutral-light p-8 rounded-lg">
+            <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6">
+              <FaUserMd className="w-8 h-8 text-primary-blue" />
+            </div>
+            <h3 className="text-xl font-bold mb-4">Family Dentistry</h3>
+            <p className="text-neutral-dark/80 mb-6">
+              Complete dental care for the whole family, from routine cleanings to advanced treatments.
+            </p>
+            <ul className="space-y-2 text-neutral-dark/80">
+              <li className="flex items-center">
+                <FaCheck className="w-5 h-5 text-primary-blue mr-2" />
+                Regular Check-ups
+              </li>
+              <li className="flex items-center">
+                <FaCheck className="w-5 h-5 text-primary-blue mr-2" />
+                Cleanings & Exams
+              </li>
+              <li className="flex items-center">
+                <FaCheck className="w-5 h-5 text-primary-blue mr-2" />
+                Restorative Care
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-neutral-light p-8 rounded-lg">
+            <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6">
+              <FaHeartbeat className="w-8 h-8 text-primary-blue" />
+            </div>
+            <h3 className="text-xl font-bold mb-4">Emergency Care</h3>
+            <p className="text-neutral-dark/80 mb-6">
+              Same-day appointments for dental emergencies. We're here when you need us most.
+            </p>
+            <ul className="space-y-2 text-neutral-dark/80">
+              <li className="flex items-center">
+                <FaCheck className="w-5 h-5 text-primary-blue mr-2" />
+                24/7 Emergency Line
+              </li>
+              <li className="flex items-center">
+                <FaCheck className="w-5 h-5 text-primary-blue mr-2" />
+                Same-Day Appointments
+              </li>
+              <li className="flex items-center">
+                <FaCheck className="w-5 h-5 text-primary-blue mr-2" />
+                Immediate Pain Relief
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

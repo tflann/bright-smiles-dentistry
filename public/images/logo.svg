@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&amp;display=swap');
+    .logo-text { font-family: 'Roboto Slab', serif; }
+    .primary { fill: #2E4057; }
+    .accent { fill: #FF9999; }
+  </style>
+  <text x="10" y="45" class="logo-text primary" font-size="32" font-weight="700">Bright Smiles</text>
+  <text x="10" y="65" class="logo-text accent" font-size="24">Dentistry</text>
+</svg> 

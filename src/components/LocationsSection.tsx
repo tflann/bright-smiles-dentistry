@@ -39,7 +39,7 @@ export default function LocationsSection() {
   const [activeLocation, setActiveLocation] = useState(locations[0])
 
   return (
-    <section className="py-16 bg-neutral-light">
+    <section className="py-16 bg-neutral-100">
       <div className="container-custom">
         <h2 className="text-3xl font-serif font-bold text-center mb-4">Convenient Locations Near You</h2>
         <p className="text-xl text-neutral-dark/80 text-center mb-12">
@@ -53,11 +53,11 @@ export default function LocationsSection() {
             <button
               key={location.id}
               onClick={() => setActiveLocation(location)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                activeLocation.id === location.id
-                  ? 'bg-primary-blue text-white'
-                  : 'bg-white text-neutral-dark hover:bg-neutral-mid'
-              }`}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 border-2 
+                ${activeLocation.id === location.id
+                  ? 'bg-primary-blue text-white border-primary-blue'
+                  : 'bg-white text-primary-blue border-primary-blue hover:bg-primary-blue/10'}
+              `}
             >
               {location.name}
             </button>

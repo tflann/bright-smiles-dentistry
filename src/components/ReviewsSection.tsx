@@ -85,6 +85,17 @@ const reviews = [
   }
 ]
 
+function shuffleArray(array: any[]) {
+  // Fisher-Yates shuffle
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+const shuffledReviews = shuffleArray([...reviews]);
+
 export default function ReviewsSection() {
   return (
     <section className="py-16 bg-white">
@@ -95,23 +106,24 @@ export default function ReviewsSection() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reviews.map((review) => (
-            <div key={review.id} className="bg-neutral-light p-6 rounded-lg">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex text-accent-gold">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <FaStar key={i} className="w-5 h-5" />
-                  ))}
-                </div>
+          {shuffledReviews.map((review: any) => (
+            <div key={review.id} className="bg-neutral-100 p-6 rounded-lg shadow-2xl">
+              <div className="flex flex-col items-center mb-4">
                 <Image
                   src={`/images/${review.platform}-logo.png`}
                   alt={`${review.platform} review`}
                   width={80}
                   height={24}
-                  className="h-6 w-auto"
+                  className="h-6 w-auto mb-2"
+                  style={{ filter: 'invert(27%) sepia(99%) saturate(747%) hue-rotate(181deg) brightness(92%) contrast(92%)' }}
                 />
+                <div className="flex text-primary-blue mb-2">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <FaStar key={i} className="w-5 h-5" />
+                  ))}
+                </div>
               </div>
-              <p className="text-neutral-dark/80 mb-4">{review.review}</p>
+              <p className="text-neutral-dark/80 mb-4 text-left">{review.review}</p>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="font-semibold">{review.name}</p>

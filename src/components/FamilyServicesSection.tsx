@@ -62,7 +62,7 @@ export default function FamilyServicesSection() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-neutral-light p-8 rounded-lg">
+          <div className="bg-neutral-100 p-8 rounded-lg shadow-2xl">
             <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6">
               <FaChild className="w-8 h-8 text-primary-blue" />
             </div>
@@ -86,7 +86,7 @@ export default function FamilyServicesSection() {
             </ul>
           </div>
 
-          <div className="bg-neutral-light p-8 rounded-lg">
+          <div className="bg-neutral-100 p-8 rounded-lg shadow-2xl">
             <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6">
               <FaUserMd className="w-8 h-8 text-primary-blue" />
             </div>
@@ -110,7 +110,7 @@ export default function FamilyServicesSection() {
             </ul>
           </div>
 
-          <div className="bg-neutral-light p-8 rounded-lg">
+          <div className="bg-neutral-100 p-8 rounded-lg shadow-2xl">
             <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6">
               <FaHeartbeat className="w-8 h-8 text-primary-blue" />
             </div>

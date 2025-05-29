@@ -40,7 +40,7 @@ export default function TechnologySection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((tech, index) => (
-            <div key={index} className="bg-neutral-light p-8 rounded-lg hover:shadow-lg transition-shadow duration-200">
+            <div key={index} className="bg-neutral-100 p-8 rounded-lg shadow-2xl transition-shadow duration-200">
               <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6">
                 {tech.icon}
               </div>
@@ -48,22 +48,6 @@ export default function TechnologySection() {
               <p className="text-neutral-dark/80">{tech.description}</p>
             </div>
           ))}
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary-blue mb-2">20+</div>
-            <p className="text-neutral-dark/80">Years of Experience</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary-blue mb-2">10,000+</div>
-            <p className="text-neutral-dark/80">Happy Patients</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary-blue mb-2">100%</div>
-            <p className="text-neutral-dark/80">Satisfaction Guaranteed</p>
-          </div>
         </div>
       </div>
     </section>

@@ -40,7 +40,7 @@ export default function TechnologySection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((tech, index) => (
-            <div key={index} className="bg-neutral-75 p-8 rounded-lg shadow-[4px_4px_16px_rgba(0,0,0,0.08)] transition-shadow duration-200">
+            <div key={index} className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.08)] transition-shadow duration-200">
               <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6 mx-auto">
                 {tech.icon}
               </div>

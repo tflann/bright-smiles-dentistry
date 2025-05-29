@@ -80,7 +80,7 @@ export default function LocationsSection({ sectionBg = 'bg-neutral-75' }: { sect
           </div>
 
           {/* Location Info */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
+          <div className="bg-white rounded-xl border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.08)] p-8">
             <h3 className="text-2xl font-bold mb-6">{activeLocation.name}</h3>
             
             <div className="space-y-4">

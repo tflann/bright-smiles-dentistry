@@ -17,23 +17,24 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Insurance Badge */}
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-4xl mb-4">🏥</div>
+            <div className="bg-neutral-75 p-8 rounded-lg shadow-[4px_4px_16px_rgba(0,0,0,0.08)]">
+              <div className="text-4xl mb-4 flex justify-center">
+                <span role="img" aria-label="Insurance" className="block">🏥</span>
+              </div>
               <h3 className="text-xl font-semibold mb-2">Most Insurance Accepted</h3>
               <p className="text-neutral-dark/80">We work with most major insurance providers to make dental care accessible for your family.</p>
             </div>
-            
-            {/* Emergency Care */}
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-4xl mb-4">🚑</div>
+            <div className="bg-neutral-75 p-8 rounded-lg shadow-[4px_4px_16px_rgba(0,0,0,0.08)]">
+              <div className="text-4xl mb-4 flex justify-center">
+                <span role="img" aria-label="Emergency" className="block">🚑</span>
+              </div>
               <h3 className="text-xl font-semibold mb-2">Same Day Emergency Care</h3>
               <p className="text-neutral-dark/80">Dental emergencies? We're here to help with same-day appointments for your family.</p>
             </div>
-
-            {/* New Patient Special */}
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-4xl mb-4">🎁</div>
+            <div className="bg-neutral-75 p-8 rounded-lg shadow-[4px_4px_16px_rgba(0,0,0,0.08)]">
+              <div className="text-4xl mb-4 flex justify-center">
+                <span role="img" aria-label="Special" className="block">🎁</span>
+              </div>
               <h3 className="text-xl font-semibold mb-2">New Patient Special</h3>
               <p className="text-neutral-dark/80">Free consultation and cleaning for new patients. Book now!</p>
             </div>
@@ -50,23 +51,31 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/appointment?service=cleaning" className="bg-neutral-light p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-200">
-              <FaTooth className="w-8 h-8 mx-auto mb-4 text-primary-blue" />
+            <Link href="/appointment?service=cleaning" className="bg-neutral-75 p-8 rounded-lg shadow-[4px_4px_16px_rgba(0,0,0,0.08)] flex flex-col items-start hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <FaTooth className="w-8 h-8 text-primary-blue" />
+              </div>
               <h3 className="font-semibold mb-2">Cleaning & Check-up</h3>
               <p className="text-neutral-dark/60 text-sm">Regular maintenance for a healthy smile</p>
             </Link>
-            <Link href="/appointment?service=emergency" className="bg-neutral-light p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-200">
-              <FaClock className="w-8 h-8 mx-auto mb-4 text-accent-red" />
+            <Link href="/appointment?service=emergency" className="bg-neutral-75 p-8 rounded-lg shadow-[4px_4px_16px_rgba(0,0,0,0.08)] flex flex-col items-start hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <FaClock className="w-8 h-8 text-accent-red" />
+              </div>
               <h3 className="font-semibold mb-2">Emergency Care</h3>
               <p className="text-neutral-dark/60 text-sm">Same-day appointments available</p>
             </Link>
-            <Link href="/appointment?service=cosmetic" className="bg-neutral-light p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-200">
-              <FaHeart className="w-8 h-8 mx-auto mb-4 text-primary-blue" />
+            <Link href="/appointment?service=cosmetic" className="bg-neutral-75 p-8 rounded-lg shadow-[4px_4px_16px_rgba(0,0,0,0.08)] flex flex-col items-start hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <FaHeart className="w-8 h-8 text-primary-blue" />
+              </div>
               <h3 className="font-semibold mb-2">Cosmetic Dentistry</h3>
               <p className="text-neutral-dark/60 text-sm">Transform your smile today</p>
             </Link>
-            <Link href="/appointment?service=family" className="bg-neutral-light p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-200">
-              <FaChild className="w-8 h-8 mx-auto mb-4 text-primary-blue" />
+            <Link href="/appointment?service=family" className="bg-neutral-75 p-8 rounded-lg shadow-[4px_4px_16px_rgba(0,0,0,0.08)] flex flex-col items-start hover:shadow-lg transition-shadow duration-200">
+              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <FaChild className="w-8 h-8 text-primary-blue" />
+              </div>
               <h3 className="font-semibold mb-2">Family Package</h3>
               <p className="text-neutral-dark/60 text-sm">Special rates for the whole family</p>
             </Link>
@@ -116,7 +125,7 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 rounded-xl p-8 text-center">
+            <div className="bg-white/10 rounded-xl p-8 text-center shadow-[4px_4px_16px_rgba(0,0,0,0.08)]">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
                 <FaHeart className="w-8 h-8 text-primary-teal" />
               </div>
@@ -125,8 +134,7 @@ export default function Home() {
                 Our team specializes in making dental visits comfortable and stress-free for children of all ages.
               </p>
             </div>
-
-            <div className="bg-white/10 rounded-xl p-8 text-center">
+            <div className="bg-white/10 rounded-xl p-8 text-center shadow-[4px_4px_16px_rgba(0,0,0,0.08)]">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
                 <FaClock className="w-8 h-8 text-primary-teal" />
               </div>
@@ -135,8 +143,7 @@ export default function Home() {
                 Early morning and evening appointments available to fit your family's busy schedule.
               </p>
             </div>
-
-            <div className="bg-white/10 rounded-xl p-8 text-center">
+            <div className="bg-white/10 rounded-xl p-8 text-center shadow-[4px_4px_16px_rgba(0,0,0,0.08)]">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
                 <FaTooth className="w-8 h-8 text-primary-teal" />
               </div>

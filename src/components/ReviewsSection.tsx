@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import { FaStar } from 'react-icons/fa'
+import { FaStar, FaStarHalfAlt } from 'react-icons/fa'
 
 const reviews = [
   {
     id: 1,
     name: 'Sarah Johnson',
     location: 'Spokane',
-    rating: 5,
+    rating: 4.5,
     review: "The team at Bright Smiles made my children's first dental visit a breeze. The office is welcoming, and the staff is incredibly patient and kind. My kids actually look forward to their check-ups now!",
     platform: 'google',
     date: '2024-03-15'
@@ -33,7 +33,7 @@ const reviews = [
     id: 4,
     name: 'David Thompson',
     location: 'Post Falls',
-    rating: 5,
+    rating: 4.5,
     review: "I had a dental emergency on a weekend, and they were able to see me right away. The care was excellent, and they made sure I was comfortable throughout the entire process.",
     platform: 'google',
     date: '2024-03-22'
@@ -101,6 +101,15 @@ export default function ReviewsSection() {
     <section className="py-16 bg-white">
       <div className="container-custom">
         <h2 className="text-3xl font-serif font-bold text-center mb-4">What Our Patients Say</h2>
+        <div className="flex items-center justify-center space-x-2 mb-4">
+          <div className="flex text-yellow-400">
+            {[...Array(4)].map((_, i) => (
+              <FaStar key={i} className="w-5 h-5" />
+            ))}
+            <FaStarHalfAlt className="w-5 h-5" />
+          </div>
+          <span className="text-neutral-dark font-medium">4.9/5 from 500+ reviews</span>
+        </div>
         <p className="text-xl text-neutral-dark/80 text-center mb-12">
           Don't just take our word for it - hear from our satisfied patients about their experiences at Bright Smiles.
         </p>
@@ -116,10 +125,11 @@ export default function ReviewsSection() {
                   height={24}
                   className="h-6 w-auto mb-2 mx-auto"
                 />
-                <div className="flex text-primary-blue mb-2">
-                  {[...Array(review.rating)].map((_, i) => (
+                <div className="flex text-yellow-400 mb-2">
+                  {Array.from({ length: Math.floor(review.rating) }).map((_, i) => (
                     <FaStar key={i} className="w-5 h-5" />
                   ))}
+                  {review.rating % 1 !== 0 && <FaStarHalfAlt className="w-5 h-5" />}
                 </div>
               </div>
               <p className="text-neutral-dark/80 mb-4 text-left">{review.review}</p>

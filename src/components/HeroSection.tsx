@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { FaPhone, FaMapMarkerAlt, FaClock, FaStar, FaAward, FaTooth } from 'react-icons/fa'
+import { FaPhone, FaMapMarkerAlt, FaClock, FaStar, FaAward, FaTooth, FaStarHalfAlt } from 'react-icons/fa'
 
 export default function HeroSection() {
   return (
@@ -38,10 +38,11 @@ export default function HeroSection() {
 
             {/* Rating Badge */}
             <div className="flex items-center justify-center space-x-2 mb-8">
-              <div className="flex text-accent-gold">
-                {[...Array(5)].map((_, i) => (
+              <div className="flex text-yellow-400">
+                {[...Array(4)].map((_, i) => (
                   <FaStar key={i} className="w-5 h-5" />
                 ))}
+                <FaStarHalfAlt className="w-5 h-5" />
               </div>
               <span className="text-white font-medium">4.9/5 from 500+ reviews</span>
             </div>

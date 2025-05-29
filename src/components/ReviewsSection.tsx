@@ -116,7 +116,7 @@ export default function ReviewsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {shuffledReviews.map((review: any) => (
-            <div key={review.id} className="bg-white p-6 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.08)]">
+            <div key={review.id} className="bg-white p-6 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
               <div className="flex flex-col items-center mb-4">
                 <Image
                   src={`/images/${review.platform}-logo.png`}

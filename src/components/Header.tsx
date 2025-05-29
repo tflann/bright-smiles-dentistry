@@ -34,11 +34,11 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 alt="Bright Smiles Dentistry"
-                width={180}
-                height={50}
-                className="h-12 w-auto"
+                width={320}
+                height={80}
+                className="h-20 w-auto"
               />
             </Link>
           </div>

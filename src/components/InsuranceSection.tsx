@@ -39,7 +39,7 @@ export default function InsuranceSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {insuranceOptions.map((option, index) => (
-            <div key={index} className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.08)] hover:shadow-lg transition-shadow duration-200">
+            <div key={index} className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)] hover:shadow-lg transition-shadow duration-200">
               <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6 mx-auto">
                 {option.icon}
               </div>

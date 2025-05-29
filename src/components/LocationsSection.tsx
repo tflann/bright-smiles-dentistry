@@ -35,11 +35,11 @@ const locations = [
   }
 ]
 
-export default function LocationsSection() {
+export default function LocationsSection({ sectionBg = 'bg-neutral-75' }: { sectionBg?: string }) {
   const [activeLocation, setActiveLocation] = useState(locations[0])
 
   return (
-    <section className="py-16 bg-neutral-100">
+    <section className={`py-16 ${sectionBg}`}>
       <div className="container-custom">
         <h2 className="text-3xl font-serif font-bold text-center mb-4">Convenient Locations Near You</h2>
         <p className="text-xl text-neutral-dark/80 text-center mb-12">

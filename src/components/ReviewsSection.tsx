@@ -107,15 +107,14 @@ export default function ReviewsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {shuffledReviews.map((review: any) => (
-            <div key={review.id} className="bg-neutral-100 p-6 rounded-lg shadow-2xl">
+            <div key={review.id} className="bg-neutral-75 p-6 rounded-lg shadow-[4px_4px_16px_rgba(0,0,0,0.08)]">
               <div className="flex flex-col items-center mb-4">
                 <Image
                   src={`/images/${review.platform}-logo.png`}
                   alt={`${review.platform} review`}
                   width={80}
                   height={24}
-                  className="h-6 w-auto mb-2"
-                  style={{ filter: 'invert(27%) sepia(99%) saturate(747%) hue-rotate(181deg) brightness(92%) contrast(92%)' }}
+                  className="h-6 w-auto mb-2 mx-auto"
                 />
                 <div className="flex text-primary-blue mb-2">
                   {[...Array(review.rating)].map((_, i) => (

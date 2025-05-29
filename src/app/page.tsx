@@ -14,7 +14,7 @@ export default function Home() {
       <HeroSection />
 
       {/* Trust Signals Section */}
-      <section className="py-16 bg-neutral-light">
+      <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Insurance Badge */}
@@ -150,7 +150,7 @@ export default function Home() {
       </section>
 
       {/* Patient Journey Section */}
-      <section className="py-16 bg-neutral-light">
+      <section className="py-16 bg-white">
         <div className="container-custom">
           <h2 className="text-3xl font-serif font-bold text-center mb-4">Your Family's Journey to Better Dental Health</h2>
           <p className="text-xl text-neutral-dark/80 text-center mb-12">
@@ -175,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* Locations Section */}
-      <LocationsSection />
+      <LocationsSection sectionBg="bg-white" />
 
       {/* CTA Section */}
       <section className="py-16 bg-primary-teal text-white">

@@ -1,6 +1,7 @@
 import HeroSection from '@/components/HeroSection'
 import LocationsSection from '@/components/LocationsSection'
 import FamilyServicesSection from '@/components/FamilyServicesSection'
+import ReviewsSection from '@/components/ReviewsSection'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FaStar, FaUserMd, FaClock, FaTooth, FaChild, FaHeart } from 'react-icons/fa'
@@ -38,83 +39,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <h2 className="text-3xl font-serif font-bold text-center mb-4">What Local Families Say</h2>
-          <p className="text-xl text-neutral-dark/80 text-center mb-12">
-            Don't just take our word for it - hear from other families in your community.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-neutral-light p-8 rounded-lg">
-              <div className="flex items-center mb-4">
-                <div className="text-accent-gold flex">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} className="w-5 h-5" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-neutral-dark/80 mb-4 text-lg">
-                "As a mom of four, finding a dentist that can handle all of us in one visit is amazing. The staff is so patient with my kids!"
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center text-primary-blue font-bold mr-4">
-                  SM
-                </div>
-                <div>
-                  <p className="font-semibold">Sarah M.</p>
-                  <p className="text-neutral-dark/60 text-sm">Spokane, Mom of 4</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-neutral-light p-8 rounded-lg">
-              <div className="flex items-center mb-4">
-                <div className="text-accent-gold flex">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} className="w-5 h-5" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-neutral-dark/80 mb-4 text-lg">
-                "My kids actually look forward to their dental visits! The waiting room is like a playground, and the staff makes them feel so comfortable."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center text-primary-blue font-bold mr-4">
-                  JK
-                </div>
-                <div>
-                  <p className="font-semibold">Jennifer K.</p>
-                  <p className="text-neutral-dark/60 text-sm">Spokane Valley, Mom of 2</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-neutral-light p-8 rounded-lg">
-              <div className="flex items-center mb-4">
-                <div className="text-accent-gold flex">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} className="w-5 h-5" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-neutral-dark/80 mb-4 text-lg">
-                "When my son had a dental emergency, they got us in right away. The care and attention they showed us was incredible."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center text-primary-blue font-bold mr-4">
-                  LT
-                </div>
-                <div>
-                  <p className="font-semibold">Lisa T.</p>
-                  <p className="text-neutral-dark/60 text-sm">Post Falls, Mom of 3</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Reviews Section */}
+      <ReviewsSection />
 
       {/* Family Services Section */}
       <FamilyServicesSection />

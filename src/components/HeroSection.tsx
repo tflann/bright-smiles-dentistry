@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { FaPhone, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
+import { FaPhone, FaMapMarkerAlt, FaClock, FaStar, FaAward, FaTooth } from 'react-icons/fa'
 
 export default function HeroSection() {
   return (
@@ -36,6 +36,16 @@ export default function HeroSection() {
               Trusted by local families for over 20 years. We make dental visits comfortable for everyone - from toddlers to grandparents.
             </p>
 
+            {/* Rating Badge */}
+            <div className="flex items-center justify-center space-x-2 mb-8">
+              <div className="flex text-accent-gold">
+                {[...Array(5)].map((_, i) => (
+                  <FaStar key={i} className="w-5 h-5" />
+                ))}
+              </div>
+              <span className="text-white font-medium">4.9/5 from 500+ reviews</span>
+            </div>
+
             {/* Trust Signals */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center text-white/90">
@@ -49,6 +59,10 @@ export default function HeroSection() {
               <div className="flex items-center text-white/90">
                 <FaPhone className="w-5 h-5 mr-2 text-primary-blue" />
                 <span>24/7 Emergency Care</span>
+              </div>
+              <div className="flex items-center text-white/90">
+                <FaTooth className="w-5 h-5 mr-2 text-primary-blue" />
+                <span>Sedation Options Available</span>
               </div>
             </div>
 
@@ -64,6 +78,20 @@ export default function HeroSection() {
             </div>
           </motion.div>
         </div>
+      </div>
+
+      {/* Floating CTAs */}
+      <div className="fixed bottom-8 left-8 z-50 hidden md:block">
+        <a href="tel:+1234567890" className="bg-accent-red text-white px-6 py-3 rounded-full shadow-lg hover:bg-accent-red/90 transition-all duration-200 flex items-center space-x-2">
+          <FaTooth className="w-5 h-5" />
+          <span>Emergency Call</span>
+        </a>
+      </div>
+      <div className="fixed bottom-8 right-8 z-50 hidden md:block">
+        <a href="tel:+1234567890" className="bg-primary-blue text-white px-6 py-3 rounded-full shadow-lg hover:bg-primary-blue/90 transition-all duration-200 flex items-center space-x-2">
+          <FaPhone className="w-5 h-5" />
+          <span>Call Now</span>
+        </a>
       </div>
     </section>
   )

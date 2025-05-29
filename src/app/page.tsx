@@ -2,9 +2,11 @@ import HeroSection from '@/components/HeroSection'
 import LocationsSection from '@/components/LocationsSection'
 import FamilyServicesSection from '@/components/FamilyServicesSection'
 import ReviewsSection from '@/components/ReviewsSection'
+import TechnologySection from '@/components/TechnologySection'
+import InsuranceSection from '@/components/InsuranceSection'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaStar, FaUserMd, FaClock, FaTooth, FaChild, FaHeart } from 'react-icons/fa'
+import { FaStar, FaUserMd, FaClock, FaTooth, FaChild, FaHeart, FaPhone, FaCalendarAlt } from 'react-icons/fa'
 
 export default function Home() {
   return (
@@ -39,16 +41,75 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <ReviewsSection />
+      {/* Quick Book Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <h2 className="text-3xl font-serif font-bold text-center mb-4">Book Your Visit</h2>
+          <p className="text-xl text-neutral-dark/80 text-center mb-12">
+            Choose your preferred service and book your appointment in seconds.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link href="/appointment?service=cleaning" className="bg-neutral-light p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-200">
+              <FaTooth className="w-8 h-8 mx-auto mb-4 text-primary-blue" />
+              <h3 className="font-semibold mb-2">Cleaning & Check-up</h3>
+              <p className="text-neutral-dark/60 text-sm">Regular maintenance for a healthy smile</p>
+            </Link>
+            <Link href="/appointment?service=emergency" className="bg-neutral-light p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-200">
+              <FaClock className="w-8 h-8 mx-auto mb-4 text-accent-red" />
+              <h3 className="font-semibold mb-2">Emergency Care</h3>
+              <p className="text-neutral-dark/60 text-sm">Same-day appointments available</p>
+            </Link>
+            <Link href="/appointment?service=cosmetic" className="bg-neutral-light p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-200">
+              <FaHeart className="w-8 h-8 mx-auto mb-4 text-primary-blue" />
+              <h3 className="font-semibold mb-2">Cosmetic Dentistry</h3>
+              <p className="text-neutral-dark/60 text-sm">Transform your smile today</p>
+            </Link>
+            <Link href="/appointment?service=family" className="bg-neutral-light p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-200">
+              <FaChild className="w-8 h-8 mx-auto mb-4 text-primary-blue" />
+              <h3 className="font-semibold mb-2">Family Package</h3>
+              <p className="text-neutral-dark/60 text-sm">Special rates for the whole family</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Indicators */}
+      <section className="py-16 bg-primary-teal text-white">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">20+</div>
+              <p className="text-xl">Years of Experience</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">10,000+</div>
+              <p className="text-xl">Happy Patients</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">100%</div>
+              <p className="text-xl">Satisfaction Guaranteed</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Family Services Section */}
       <FamilyServicesSection />
 
-      {/* Why Moms Choose Bright Smiles */}
+      {/* Reviews Section */}
+      <ReviewsSection />
+
+      {/* Technology Section */}
+      <TechnologySection />
+
+      {/* Insurance Section */}
+      <InsuranceSection />
+
+      {/* Why Choose Us Section */}
       <section className="py-16 bg-primary-teal text-white">
         <div className="container-custom">
-          <h2 className="text-3xl font-serif font-bold text-center mb-4">Why Moms Choose Bright Smiles</h2>
+          <h2 className="text-3xl font-serif font-bold text-center mb-4">Why Choose Bright Smiles Dentistry</h2>
           <p className="text-xl text-white/80 text-center mb-12">
             We understand that finding the right dental care for your family is important. 
             Here's why parents trust us with their children's smiles.
@@ -136,6 +197,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Floating Emergency CTA */}
+      <div className="fixed bottom-8 left-8 z-50 hidden md:block">
+        <a href="tel:+1234567890" className="bg-accent-red text-white px-6 py-3 rounded-full shadow-lg hover:bg-accent-red/90 transition-all duration-200 flex items-center space-x-2">
+          <FaPhone className="w-5 h-5" />
+          <span>Emergency Call</span>
+        </a>
+      </div>
     </main>
   )
 } 

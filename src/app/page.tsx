@@ -6,176 +6,263 @@ import TechnologySection from '@/components/TechnologySection'
 import InsuranceSection from '@/components/InsuranceSection'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaStar, FaUserMd, FaClock, FaTooth, FaChild, FaHeart, FaPhone, FaCalendarAlt } from 'react-icons/fa'
+import { FaStar, FaUserMd, FaClock, FaTooth, FaChild, FaHeart, FaPhone, FaCalendarAlt, FaCheckCircle, FaSmile, FaUserFriends } from 'react-icons/fa'
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
 
-      {/* Trust Signals Section */}
-      <section className="py-16 bg-white">
+      {/* Welcome Section */}
+      <section className="py-20 bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
-              <div className="text-4xl mb-4 flex justify-center">
-                <span role="img" aria-label="Insurance" className="block">🏥</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
+                Welcome to Bright Smiles Dentistry
+              </h2>
+              <p className="text-lg text-neutral-dark/80 mb-6">
+                At Bright Smiles Dentistry, we believe that exceptional dental care should be accessible to every family. Our modern, comfortable office is designed with your family's comfort in mind, featuring the latest technology and a warm, welcoming atmosphere.
+              </p>
+              <p className="text-lg text-neutral-dark/80 mb-8">
+                Our team of experienced dental professionals is committed to providing personalized care that meets the unique needs of each family member, from the youngest to the oldest. We take the time to explain procedures, answer questions, and ensure you feel confident about your dental care decisions.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Link href="/appointment" className="btn-primary">
+                  Book Your Visit
+                </Link>
+                <Link href="/services" className="btn-secondary">
+                  Explore Services
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Most Insurance Accepted</h3>
-              <p className="text-neutral-dark/80">We work with most major insurance providers to make dental care accessible for your family.</p>
             </div>
-            <div className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
-              <div className="text-4xl mb-4 flex justify-center">
-                <span role="img" aria-label="Emergency" className="block">🚑</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Same Day Emergency Care</h3>
-              <p className="text-neutral-dark/80">Dental emergencies? We're here to help with same-day appointments for your family.</p>
-            </div>
-            <div className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
-              <div className="text-4xl mb-4 flex justify-center">
-                <span role="img" aria-label="Special" className="block">🎁</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">New Patient Special</h3>
-              <p className="text-neutral-dark/80">Free consultation and cleaning for new patients. Book now!</p>
+            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
+              <Image
+                src="/images/dental-office-interior.jpg"
+                alt="Modern dental office interior"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Quick Book Section */}
-      <section className="py-16 bg-white">
+      {/* Our Approach Section */}
+      <section className="py-20 bg-neutral-light">
         <div className="container-custom">
-          <h2 className="text-3xl font-serif font-bold text-center mb-4">Book Your Visit</h2>
-          <p className="text-xl text-neutral-dark/80 text-center mb-12">
-            Choose your preferred service and book your appointment in seconds.
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-4">
+            Our Approach to Family Dentistry
+          </h2>
+          <p className="text-xl text-neutral-dark/80 text-center mb-12 max-w-3xl mx-auto">
+            We combine advanced technology with a gentle, patient-centered approach to create a positive dental experience for your entire family.
           </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
+              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6">
+                <FaUserFriends className="w-8 h-8 text-primary-blue" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Family-Focused Care</h3>
+              <p className="text-neutral-dark/80 mb-4">
+                We understand that each family member has unique dental needs. Our comprehensive approach ensures that everyone, from toddlers to grandparents, receives personalized care in a comfortable environment.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-neutral-dark/80">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2" />
+                  <span>Child-friendly environment</span>
+                </li>
+                <li className="flex items-center text-neutral-dark/80">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2" />
+                  <span>Gentle approach for all ages</span>
+                </li>
+                <li className="flex items-center text-neutral-dark/80">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2" />
+                  <span>Family appointment scheduling</span>
+                </li>
+              </ul>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/appointment?service=cleaning" className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)] flex flex-col items-start hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <div className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
+              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6">
                 <FaTooth className="w-8 h-8 text-primary-blue" />
               </div>
-              <h3 className="font-semibold mb-2">Cleaning & Check-up</h3>
-              <p className="text-neutral-dark/60 text-sm">Regular maintenance for a healthy smile</p>
-            </Link>
-            <Link href="/appointment?service=emergency" className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)] flex flex-col items-start hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <FaClock className="w-8 h-8 text-accent-red" />
+              <h3 className="text-xl font-bold mb-4">Preventive Focus</h3>
+              <p className="text-neutral-dark/80 mb-4">
+                Prevention is the foundation of good dental health. We emphasize regular check-ups, cleanings, and education to help your family maintain healthy smiles for life.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-neutral-dark/80">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2" />
+                  <span>Regular check-ups</span>
+                </li>
+                <li className="flex items-center text-neutral-dark/80">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2" />
+                  <span>Professional cleanings</span>
+                </li>
+                <li className="flex items-center text-neutral-dark/80">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2" />
+                  <span>Dental health education</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
+              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-6">
+                <FaSmile className="w-8 h-8 text-primary-blue" />
               </div>
-              <h3 className="font-semibold mb-2">Emergency Care</h3>
-              <p className="text-neutral-dark/60 text-sm">Same-day appointments available</p>
-            </Link>
-            <Link href="/appointment?service=cosmetic" className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)] flex flex-col items-start hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <FaHeart className="w-8 h-8 text-primary-blue" />
-              </div>
-              <h3 className="font-semibold mb-2">Cosmetic Dentistry</h3>
-              <p className="text-neutral-dark/60 text-sm">Transform your smile today</p>
-            </Link>
-            <Link href="/appointment?service=family" className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)] flex flex-col items-start hover:shadow-lg transition-shadow duration-200">
-              <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <FaChild className="w-8 h-8 text-primary-blue" />
-              </div>
-              <h3 className="font-semibold mb-2">Family Package</h3>
-              <p className="text-neutral-dark/60 text-sm">Special rates for the whole family</p>
-            </Link>
+              <h3 className="text-xl font-bold mb-4">Comfort & Technology</h3>
+              <p className="text-neutral-dark/80 mb-4">
+                Our modern office combines advanced dental technology with a warm, welcoming atmosphere to ensure your family's comfort during every visit.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-neutral-dark/80">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2" />
+                  <span>Digital X-rays</span>
+                </li>
+                <li className="flex items-center text-neutral-dark/80">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2" />
+                  <span>Comfort amenities</span>
+                </li>
+                <li className="flex items-center text-neutral-dark/80">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2" />
+                  <span>Modern treatment options</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Trust Indicators */}
-      <section className="py-16 bg-primary-teal text-white">
+      {/* Services Overview */}
+      <section className="py-20 bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">20+</div>
-              <p className="text-xl">Years of Experience</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">10,000+</div>
-              <p className="text-xl">Happy Patients</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">100%</div>
-              <p className="text-xl">Satisfaction Guaranteed</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Family Services Section */}
-      <FamilyServicesSection />
-
-      {/* Reviews Section */}
-      <ReviewsSection />
-
-      {/* Technology Section */}
-      <TechnologySection />
-
-      {/* Insurance Section */}
-      <InsuranceSection />
-
-      {/* Why Choose Us Section */}
-      <section className="py-16 bg-primary-teal text-white">
-        <div className="container-custom">
-          <h2 className="text-3xl font-serif font-bold text-center mb-4">Why Choose Bright Smiles Dentistry</h2>
-          <p className="text-xl text-white/80 text-center mb-12">
-            We understand that finding the right dental care for your family is important. 
-            Here's why parents trust us with their children's smiles.
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-4">
+            Comprehensive Family Dental Services
+          </h2>
+          <p className="text-xl text-neutral-dark/80 text-center mb-12 max-w-3xl mx-auto">
+            From routine check-ups to advanced treatments, we offer a full range of dental services to keep your family's smiles healthy and beautiful.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 rounded-xl p-8 text-center shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
+              <h3 className="text-2xl font-bold mb-4">Preventive Care</h3>
+              <p className="text-neutral-dark/80 mb-6">
+                Regular dental care is essential for maintaining healthy teeth and gums. Our preventive services help catch issues early and keep your family's smiles bright.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">Regular Check-ups</span>
+                    <p className="text-neutral-dark/60">Comprehensive examinations to monitor oral health</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">Professional Cleanings</span>
+                    <p className="text-neutral-dark/60">Thorough cleaning to remove plaque and tartar</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">Dental Sealants</span>
+                    <p className="text-neutral-dark/60">Protective coating to prevent cavities</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
+              <h3 className="text-2xl font-bold mb-4">Restorative Care</h3>
+              <p className="text-neutral-dark/80 mb-6">
+                When dental issues arise, we provide effective solutions to restore your family's oral health and maintain beautiful smiles.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">Fillings & Crowns</span>
+                    <p className="text-neutral-dark/60">Durable restorations for damaged teeth</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">Root Canal Therapy</span>
+                    <p className="text-neutral-dark/60">Gentle treatment to save infected teeth</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">Dental Implants</span>
+                    <p className="text-neutral-dark/60">Permanent solution for missing teeth</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/services" className="btn-primary text-lg">
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-primary-teal text-white">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-4">
+            Why Choose Bright Smiles Dentistry
+          </h2>
+          <p className="text-xl text-white/80 text-center mb-12 max-w-3xl mx-auto">
+            We combine expertise, technology, and a patient-centered approach to provide exceptional dental care for your family.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white/10 rounded-xl p-8 text-center">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaHeart className="w-8 h-8 text-primary-teal" />
+                <FaUserMd className="w-8 h-8 text-primary-teal" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Gentle Care</h3>
+              <h3 className="text-xl font-bold mb-4">Expert Team</h3>
               <p className="text-white/80">
-                Our team specializes in making dental visits comfortable and stress-free for children of all ages.
+                Our experienced dental professionals are committed to providing the highest quality care.
               </p>
             </div>
-            <div className="bg-white/10 rounded-xl p-8 text-center shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
+
+            <div className="bg-white/10 rounded-xl p-8 text-center">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
                 <FaClock className="w-8 h-8 text-primary-teal" />
               </div>
               <h3 className="text-xl font-bold mb-4">Convenient Hours</h3>
               <p className="text-white/80">
-                Early morning and evening appointments available to fit your family's busy schedule.
+                Early morning and evening appointments to fit your family's busy schedule.
               </p>
             </div>
-            <div className="bg-white/10 rounded-xl p-8 text-center shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
+
+            <div className="bg-white/10 rounded-xl p-8 text-center">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
                 <FaTooth className="w-8 h-8 text-primary-teal" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Preventive Focus</h3>
+              <h3 className="text-xl font-bold mb-4">Modern Technology</h3>
               <p className="text-white/80">
-                We emphasize education and prevention to help your child maintain a healthy smile for life.
+                State-of-the-art equipment and techniques for optimal results.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Patient Journey Section */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <h2 className="text-3xl font-serif font-bold text-center mb-4">Your Family's Journey to Better Dental Health</h2>
-          <p className="text-xl text-neutral-dark/80 text-center mb-12">
-            We make it easy to get started with our simple, family-friendly process.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
-              <div className="text-2xl font-semibold text-primary-blue mb-2">1. Book Your Visit</div>
-              <p className="text-neutral-dark/80">Schedule your family's appointments online or call us. We offer flexible hours to fit your busy schedule.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
-              <div className="text-2xl font-semibold text-primary-blue mb-2">2. First Visit</div>
-              <p className="text-neutral-dark/80">Meet our team, discuss your family's needs, and receive comprehensive examinations in a comfortable environment.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
-              <div className="text-2xl font-semibold text-primary-blue mb-2">3. Treatment Plan</div>
-              <p className="text-neutral-dark/80">We'll create personalized treatment plans for your family and discuss all options with you.</p>
+            <div className="bg-white/10 rounded-xl p-8 text-center">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                <FaHeart className="w-8 h-8 text-primary-teal" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Patient Comfort</h3>
+              <p className="text-white/80">
+                A warm, welcoming environment designed for your family's comfort.
+              </p>
             </div>
           </div>
         </div>
@@ -184,8 +271,88 @@ export default function Home() {
       {/* Locations Section */}
       <LocationsSection sectionBg="bg-white" />
 
+      {/* Insurance and Financing Section */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-4">
+            Insurance & Financing Options
+          </h2>
+          <p className="text-xl text-neutral-dark/80 text-center mb-12 max-w-3xl mx-auto">
+            We believe quality dental care should be accessible to everyone. That's why we offer flexible payment options and work with most major insurance providers.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
+              <h3 className="text-2xl font-bold mb-4">Insurance Coverage</h3>
+              <p className="text-neutral-dark/80 mb-6">
+                We work with most major insurance providers to help you maximize your benefits and minimize out-of-pocket expenses.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">In-Network Providers</span>
+                    <p className="text-neutral-dark/60">We accept most major PPO insurance plans</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">Out-of-Network Benefits</span>
+                    <p className="text-neutral-dark/60">We'll help you maximize your benefits</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">Claims Assistance</span>
+                    <p className="text-neutral-dark/60">We handle all insurance paperwork</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg border border-neutral-200 shadow-[6px_6px_24px_rgba(0,0,0,0.16)]">
+              <h3 className="text-2xl font-bold mb-4">Flexible Financing</h3>
+              <p className="text-neutral-dark/80 mb-6">
+                We offer several payment options to make dental care affordable for your family, including flexible financing plans and convenient payment methods.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">CareCredit Financing</span>
+                    <p className="text-neutral-dark/60">Flexible payment plans with low monthly payments</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">In-House Payment Plans</span>
+                    <p className="text-neutral-dark/60">Customized payment options for qualified patients</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <FaCheckCircle className="w-5 h-5 text-primary-blue mr-2 mt-1" />
+                  <div>
+                    <span className="font-semibold">Multiple Payment Methods</span>
+                    <p className="text-neutral-dark/60">Credit cards, checks, and cash accepted</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/insurance" className="btn-primary text-lg">
+              Learn More About Insurance & Financing
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-16 bg-primary-teal text-white">
+      <section className="py-20 bg-primary-teal text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-serif mb-4">
             Ready to Experience the Bright Smiles Difference?

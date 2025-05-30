@@ -49,7 +49,7 @@ export default function Home() {
       </section>
 
       {/* Our Approach Section */}
-      <section className="py-20 bg-neutral-light">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-4">
             Our Approach to Family Dentistry
